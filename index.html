@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,74 +7,95 @@
   <title>Time Tracker</title>
   <style>
     body {
-      font-family: "Pretendard", sans-serif;
-      background-color: #f5f5f5;
+      font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+      background-color: #f0f4f8;
       padding: 2rem;
-      color: #333;
+      display: flex;
+      justify-content: center;
     }
+
+    .container {
+      background-color: white;
+      border: 2px solid #dfe6e9;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      max-width: 420px;
+      width: 100%;
+    }
+
     h1 {
       text-align: center;
-      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      color: #2d3436;
+      margin-bottom: 1.5rem;
     }
-    .time-table {
+
+    table {
       width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
       border-collapse: collapse;
     }
-    .time-table th, .time-table td {
-      border: 1px solid #ccc;
-      padding: 12px;
+
+    th, td {
+      border: 1px solid #dcdde1;
+      padding: 0.75rem;
       text-align: center;
+      font-size: 0.95rem;
     }
-    .time-table th {
-      background-color: #eee;
+
+    th {
+      background-color: #f5f6fa;
+      font-weight: 600;
     }
-    .label {
+
+    .activity {
+      border-radius: 8px;
+      padding: 0.4rem 0.6rem;
       display: inline-block;
-      padding: 5px 10px;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      color: white;
+      font-weight: 500;
     }
-    .label.walk { background-color: #a29bfe; }
-    .label.shower { background-color: #ffeaa7; color: #333; }
-    .label.break { background-color: #fab1a0; }
-    .label.work { background-color: #55efc4; color: #333; }
-    .label.free { background-color: #dfe6e9; color: #333; }
+
+    .walk { background-color: #dfe6ff; color: #2d3436; }
+    .shower { background-color: #fff6b7; color: #2d3436; }
+    .meal { background-color: #ffeaa7; color: #2d3436; }
+    .organize { background-color: #c8e6c9; color: #2d3436; }
+    .widget { background-color: #a3d8f4; color: #2d3436; }
+    .free { background-color: #f8bbd0; color: #2d3436; }
   </style>
 </head>
 <body>
-  <h1>🕘 오늘의 타임트래커</h1>
-  <table class="time-table">
-    <tr>
-      <th>시간</th>
-      <th>활동</th>
-    </tr>
-    <tr>
-      <td>09:00 ~ 10:00</td>
-      <td><span class="label walk">산책 + 생각정리</span></td>
-    </tr>
-    <tr>
-      <td>10:00 ~ 11:00</td>
-      <td><span class="label shower">리넝 + 샤워</span></td>
-    </tr>
-    <tr>
-      <td>11:00 ~ 12:00</td>
-      <td><span class="label break">아침</span></td>
-    </tr>
-    <tr>
-      <td>12:00 ~ 13:00</td>
-      <td><span class="label work">할 일 정리</span></td>
-    </tr>
-    <tr>
-      <td>13:00 ~ 14:00</td>
-      <td><span class="label work">위젯 제작</span></td>
-    </tr>
-    <tr>
-      <td>14:00 ~ 16:00</td>
-      <td><span class="label free">자유시간</span></td>
-    </tr>
-  </table>
+  <div class="container">
+    <h1>오늘의 타임트래커</h1>
+    <table>
+      <tr>
+        <th>시간</th>
+        <th>활동</th>
+      </tr>
+      <tr>
+        <td>09:00 ~ 10:00</td>
+        <td><span class="activity walk">산책 + 생각정리</span></td>
+      </tr>
+      <tr>
+        <td>10:00 ~ 11:00</td>
+        <td><span class="activity shower">리넝 + 샤워</span></td>
+      </tr>
+      <tr>
+        <td>11:00 ~ 12:00</td>
+        <td><span class="activity meal">아침</span></td>
+      </tr>
+      <tr>
+        <td>12:00 ~ 13:00</td>
+        <td><span class="activity organize">할 일 정리</span></td>
+      </tr>
+      <tr>
+        <td>13:00 ~ 14:00</td>
+        <td><span class="activity widget">위젯 제작</span></td>
+      </tr>
+      <tr>
+        <td>14:00 ~ 16:00</td>
+        <td><span class="activity free">자유시간</span></td>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>
